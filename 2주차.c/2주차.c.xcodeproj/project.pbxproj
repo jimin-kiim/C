@@ -12,8 +12,8 @@
 		4DC818F126E7AF660004B7F8 /* 문제3.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC818F026E7AF660004B7F8 /* 문제3.c */; };
 		4DC818F426E7AF760004B7F8 /* 문제4.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC818F326E7AF760004B7F8 /* 문제4.c */; };
 		4DC818F726E7AF920004B7F8 /* 문제5.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC818F626E7AF920004B7F8 /* 문제5.c */; };
-		4DC818FA26E7AFD20004B7F8 /* 문제6.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC818F926E7AFD20004B7F8 /* 문제6.c */; };
 		4DC818FD26E7AFEA0004B7F8 /* 문제7.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC818FC26E7AFEA0004B7F8 /* 문제7.c */; };
+		4DC8190026E7B5850004B7F8 /* 문제6.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DC818FF26E7B5850004B7F8 /* 문제6.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +35,8 @@
 		4DC818F026E7AF660004B7F8 /* 문제3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "문제3.c"; sourceTree = SOURCE_ROOT; };
 		4DC818F326E7AF760004B7F8 /* 문제4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "문제4.c"; sourceTree = SOURCE_ROOT; };
 		4DC818F626E7AF920004B7F8 /* 문제5.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "문제5.c"; sourceTree = SOURCE_ROOT; };
-		4DC818F926E7AFD20004B7F8 /* 문제6.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "문제6.c"; path = "../../../문제6.c"; sourceTree = "<group>"; };
 		4DC818FC26E7AFEA0004B7F8 /* 문제7.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "문제7.c"; sourceTree = SOURCE_ROOT; };
+		4DC818FF26E7B5850004B7F8 /* 문제6.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "문제6.c"; path = "../../문제6.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 				4DC818F026E7AF660004B7F8 /* 문제3.c */,
 				4DC818F326E7AF760004B7F8 /* 문제4.c */,
 				4DC818F626E7AF920004B7F8 /* 문제5.c */,
-				4DC818F926E7AFD20004B7F8 /* 문제6.c */,
+				4DC818FF26E7B5850004B7F8 /* 문제6.c */,
 				4DC818FC26E7AFEA0004B7F8 /* 문제7.c */,
 			);
 			path = "2주차.c";
@@ -137,11 +137,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC818FD26E7AFEA0004B7F8 /* 문제7.c in Sources */,
+				4DC8190026E7B5850004B7F8 /* 문제6.c in Sources */,
 				4DC818F726E7AF920004B7F8 /* 문제5.c in Sources */,
 				4DC818EE26E78F4D0004B7F8 /* 문제2.c in Sources */,
 				4DC818F126E7AF660004B7F8 /* 문제3.c in Sources */,
 				4DC818F426E7AF760004B7F8 /* 문제4.c in Sources */,
-				4DC818FA26E7AFD20004B7F8 /* 문제6.c in Sources */,
 				4DC818E626E78ED40004B7F8 /* 문제1.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
