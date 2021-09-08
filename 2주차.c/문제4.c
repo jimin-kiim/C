@@ -4,17 +4,17 @@
 //
 //  Created by 김지민 on 2021/09/07.
 //
+//#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //
-//#undef _CRT_SECURE_NO_WARNINGS
-//
-//int main() {
+//int main(void) {
 //    char input;
-//    scanf("%c",&input);
-//    printf("%c\n",input);
-//    printf("%o\n", input);
+//    printf("문자를 하나 입력하세요: ");
+//    scanf("%c", &input);
+//    printf("%c\n", input);
+//    printf("%#o\n", input);
 //    printf("%d\n", input);
-//    printf("%x\n", input);
-//    
+//    printf("%#x\n", input);
+//
 //    return 0;
 //}
