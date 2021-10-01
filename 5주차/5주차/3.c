@@ -9,11 +9,12 @@
 //
 //int main(void) {
 //    double degree[] = {-5.34, 3.67, 19.76, 28.76, 35.63};
-//    int size=sizeof(degree);
+//    int size=sizeof(degree)/sizeof(degree[0]);
 //    
-//    for (int i=0; i<size/8; i++){
-//        printf("%.2lf\n",degree[i]);
+//    printf("배열의 원소 값을 출력: \n");
+//    for (int i=0; i<size; i++){
+//        printf("%.2lf ",degree[i]);
 //    }
-//    
+//    printf("\n");
 //    return 0;
 //}

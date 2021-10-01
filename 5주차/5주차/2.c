@@ -19,9 +19,9 @@
 //    p1 = &input1;
 //    p2 = &input2;
 //
-//    printf("합: %lf\n",(*p1)+(*p2));
-//    printf("차: %lf\n",*p1-*p2);
-//    printf("곱: %lf\n",*p1**p2);
-//    printf("나눗셈: %lf\n",(*p1)/(*p2));
+//    printf("%.2lf+%.2lf = %.2lf\n",*p1,*p2,(*p1)+(*p2));
+//    printf("%.2lf-%.2lf = %.2lf\n",*p1,*p2,*p1-*p2);
+//    printf("%.2lf*%.2lf = %.2lf\n",*p1,*p2,*p1**p2);
+//    printf("%.2lf/%.2lf = %.2lf\n",*p1,*p2,(*p1)/(*p2));
 //    return 0;
 //}
