@@ -6,10 +6,11 @@
 //
 
 #include <stdio.h>
-int max3(int num1, int num2, int num3);
+
+int max3(int, int, int);
 
 int main(void) {
-    int num1, num2, num3,result;
+    int num1, num2, num3, result;
     
     printf("세 개의 정수를 입력해 주세요: ");
     scanf("%d %d %d", &num1, &num2, &num3);
@@ -19,17 +20,10 @@ int main(void) {
     return 0;
 }
 
-int max3(int num1, int num2, int num3) {
-    int result=0;
-    if (num1>num2){
-        result=num1;
-        if (num1<num3){
-            result=num3;
-        }
-    }else if (num2>num3){
-        result=num2;
-    }else {
-        result=num3;
-    }
+int max3(int a, int b, int c) {
+    int result=a;
+    if(result<b) result=b;
+    if(result<c) result=c;
+    
     return result;
 }
