@@ -14,6 +14,6 @@ int main(int argc, char *argv[] ){
     printf("argc = %d\n", argc);
     for (i = 0; i < argc; i++)
            printf("argv[%d] = %s\n", i, argv[i]);
-    printf("%d+ %d=%d",argc, atoi(argv[1]),argc+ atoi(argv[1]));
+    printf("%d+ %d=%d",atoi(argv[1]), atoi(argv[2]),atoi(argv[1])+ atoi(argv[2]));
     return 0;
 }
