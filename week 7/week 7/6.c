@@ -17,9 +17,12 @@ int main() {
     printf("정수를 입력하세요: ");
     scanf("%s",input);
     
-    for (int i=0; i<strlen(input); i++){
-        num+=(input[strlen(input)-i-1]-'0')*pow(10,i);
+    int size=strlen(input);
+    
+    for (int i=0; i<size; i++){
+        num+=(input[size-i-1]-'0')*pow(10,i);
     }
+    
     printf("정수로 변환한 결과: %d\n",num);
     printf("atoi 함수 이용 결과: %d\n",atoi(input));
     
