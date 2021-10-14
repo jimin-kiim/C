@@ -6,13 +6,16 @@
 //
 //
 #include <stdio.h>
+#include <string.h>
 void mystrcat(char [], char []);
 
 int main() {
     
     char s1[100] = "C ";
     char s2[50] = "programming language";
+    printf("(mystrcat) 연결된 결과: ");
     mystrcat(s1,s2);
+    printf("  (strcat) 연결된 결과: %s\n",strcat(s1,s2));
     
     return 0;
 }
@@ -29,7 +32,6 @@ void mystrcat(char s1[], char s2[]) {
     while(*s2){
         s3[count++]=*s2++;
     }
-        
+    s3[count]='\0';
     printf("%s\n",s3);
 }
-
