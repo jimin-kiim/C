@@ -7,14 +7,14 @@
 
 #include <stdio.h>
 void save(int);
-void withdraw(int);
+int withdraw(int);
+void header_row(void);
 
 int total=0;
 
 int main() {
     int choice,money;
-    printf("deposit   withdrawal   total-deposit   total-withdrawal   balance\n");
-    printf("=================================================================\n");
+    header_row();
     save(5000);
     save(24000);
     withdraw(3000);
@@ -28,12 +28,10 @@ int main() {
     printf("for how much? >>");
     scanf("%d",&money);
     if (choice==1){
-        printf("deposit   withdrawal   total-deposit   total-withdrawal   balance\n");
-        printf("=================================================================\n");
+        header_row();
         save(money);
     }else{
-        printf("deposit   withdrawal   total-deposit   total-withdrawal   balance\n");
-        printf("=================================================================\n");
+        header_row();
         withdraw(money);
     }
     return 0;
@@ -46,9 +44,20 @@ void save(int money){
     printf("%7d %28d %28d\n",money, amount, total);
 }
 
-void withdraw(int money){
+int withdraw(int money){
     static int amount;
+    if(amount<money){
+        printf("The balance is not enough.\n");
+        return 0;
+    }
     total-=money;
     amount+=money;
     printf("%20d %34d %9d\n",money, amount, total);
+    
+    return 0;
+}
+
+void header_row(){
+    printf("deposit   withdrawal   total-deposit   total-withdrawal   balance\n");
+    printf("=================================================================\n");
 }
