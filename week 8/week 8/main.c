@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
 }
 
 void fibonacci(int prev, int num){
-    static int i=0;
+    static int i=1;
     while(i++<count){
         int next=prev+num;
         printf("%d ",next);
