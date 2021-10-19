@@ -18,21 +18,32 @@ int main() {
     save(5000);
     save(24000);
     withdraw(3000);
-    printf("what are you going to do? 1: desposit 2: withdrawal >>");
-    scanf("%d",&choice);
-    while (choice!=1&&choice!=2){
-        printf("please choose a number between 1 or 2. \n");
+    while(1){
         printf("what are you going to do? 1: desposit 2: withdrawal >>");
         scanf("%d",&choice);
-    }
-    printf("for how much? >>");
-    scanf("%d",&money);
-    if (choice==1){
-        header_row();
-        save(money);
-    }else{
-        header_row();
-        withdraw(money);
+        while (choice!=1&&choice!=2){
+            printf("please choose a number between 1 or 2. \n");
+            printf("what are you going to do? 1: desposit 2: withdrawal >>");
+            scanf("%d",&choice);
+        }
+        printf("for how much? >>");
+        scanf("%d",&money);
+        if (choice==1){
+            header_row();
+            save(money);
+        }else{
+            header_row();
+            withdraw(money);
+        }
+        printf("what are you going to do? 1: exit 2: continue >>");
+        scanf("%d",&choice);
+        while (choice!=1&&choice!=2){
+            printf("please choose a number between 1 or 2. \n");
+            printf("what are you going to do? 1: exit 2: continue >>");
+            scanf("%d",&choice);
+        }
+        if(choice==1)
+            return 0;
     }
     return 0;
 }
@@ -46,7 +57,7 @@ void save(int money){
 
 int withdraw(int money){
     static int amount;
-    if(amount<money){
+    if(total<money){
         printf("The balance is not enough.\n");
         return 0;
     }
