@@ -11,8 +11,11 @@ int main(){
     int input;
     printf("Enter a decimal number >> ");
     scanf("%d",&input);
-    printf("decimal into binary: ");
+    printf("Converted into..\n");
+    printf("binary: ");
     dtob(input);
+    printf("octal : %o\n",input);
+    printf("hexadecimal: %X\n",input);
     return 0;
 }
 
