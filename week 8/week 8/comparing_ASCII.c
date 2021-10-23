@@ -6,19 +6,22 @@
 //
 
 #include <stdio.h>
-
+char ascii(char []);
 int main() {
     char word[50];
-    int i=0;
-    char max;
     printf("Enter a word >> ");
     scanf("%s",word);
-    max=word[0];
+    printf("result: %c\n",ascii(word));
+    return 0;
+}
+
+char ascii(char word[]){
+    int i=0;
+    char max=word[0];
     while(word[i]){
         if (max<word[i])
             max=word[i];
         i++;
     }
-    printf("%c",max);
-    return 0;
+    return max;
 }
