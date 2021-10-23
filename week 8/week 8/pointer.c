@@ -18,7 +18,18 @@ int main(){
     printf("\n");
     for(; i>0; i--)
         sum+=*ptr++;
-
     printf("sum: %d\n",sum);
+    
+    int *first=&arr;
+    int *last=&arr[4];
+    int temp;
+    for(i=0;i<3;i++){
+        temp=*last;
+        *last--=*first;
+        *first++=temp;
+    }
+    for(i=0;i<5;i++)
+        printf("%d ",arr[i]);
+    printf("\n");
     return 0;
 }
