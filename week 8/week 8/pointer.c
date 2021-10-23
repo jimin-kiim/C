@@ -10,9 +10,15 @@
 int main(){
     int arr[5]={1,2,3,4,5};
     int *ptr=&arr;
-    for(int i=0;i<5; i++){
+    int i=0,sum=0;
+    for(i=0;i<5; i++){
         *(ptr+i)+=2;
-        printf("%d \n",arr[i]);
+        printf("%d ",arr[i]);
     }
+    printf("\n");
+    for(; i>0; i--)
+        sum+=*ptr++;
+
+    printf("sum: %d\n",sum);
     return 0;
 }
