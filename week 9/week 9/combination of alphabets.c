@@ -7,32 +7,51 @@
 
 #include <stdio.h>
 #include <string.h>
-int fact(int );
+int fact(int);
+
 int main(void){
-    char string[50];
+    char input[50]={'\0'};
+    char string[50]={'\0'};
     int count[50]={0};
-    printf("Enter any words : ");
-    scanf("%s",string);
-    int size=strlen(string);
-    int k=0;
+    int i,k,j;
     
-    for(int i=0; i<size; i++){
-        count[k]=1;
-        for(int j=i+1; j<size-i-1; j++){
-            if (string[i]==string[j])
-                count[k]++;
-        }
-        k++;
-    }
-    k=0;
+    printf("Enter any words : ");
+    scanf("%s",input);
+    
+    int size=strlen(input);
     int result=fact(size);
     printf("%d\n",result);
-    while(count[k]){
-        printf("count[%d]:%d\n",count[k],k);
-        result/=fact(count[k++]);
+    
+    for(i=0; i<size; i++){
+        string[i]=input[i];
+    }
+    string[i]='\0';
+    
+    k=0;
+    i=0;
+    while(string[i]){
+        count[k]=1;
+        j=i+1;
+        if(string[i]!='*'){
+            while(string[j]){
+                if (string[i]==string[j]){
+                    count[k]+=1;
+                    string[j]='*';
+                }
+                j++;
+            }
+        }
+        k++;
+        i++;
     }
     
-    printf("the number of combinations that can be made by '%s': %d\n",string,result);
+    k=0;
+    while(count[k]){
+        result/=fact(count[k]);
+        k++;
+    }
+    
+    printf("the number of combinations that can be made by '%s': %d\n",input,result);
     return 0;
 }
 
