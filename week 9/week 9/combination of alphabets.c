@@ -10,8 +10,8 @@
 int fact(int);
 
 int main(void){
-    char input[50]={'\0'};
-    char string[50]={'\0'};
+    char input[50];
+    char string[50];
     int count[50]={0};
     int i,k,j;
     
@@ -19,8 +19,6 @@ int main(void){
     scanf("%s",input);
     
     int size=strlen(input);
-    int result=fact(size);
-    printf("%d\n",result);
     
     for(i=0; i<size; i++){
         string[i]=input[i];
@@ -45,6 +43,7 @@ int main(void){
         i++;
     }
     
+    int result=fact(size);
     k=0;
     while(count[k]){
         result/=fact(count[k]);
