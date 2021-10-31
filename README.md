@@ -1,5 +1,5 @@
 |week|contents|
-|------|---|
+|:----:|---|
 |**1**|data types, variable and constant, the printf function|
 |**2**|the scanf function, bool type, operators, control statement|
 |**3**|( review exercises )|
