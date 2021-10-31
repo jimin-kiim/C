@@ -9,3 +9,4 @@
 |**7**|scope, life time, linkage of variable, memory structure, storage class|
 |**8**|( review exercises )|
 |**9**|( review exercises )+discrete mathematics algorithms|
+|**10**|structure, union|
