@@ -6,6 +6,7 @@
 //
 
 #include <stdio.h>
+#include <string.h>
 
 typedef struct {
     char title[50];
@@ -13,19 +14,23 @@ typedef struct {
     int pages;
 }Book;
 
-Book books[10];
+Book books[10]={{"C programming", "Tim", 529},{"Java programming", "Karen", 345}};
 
 int main(void){
-    for(int i=0; i<3; i++){
-        printf("Please enter data of book%d\n",i+1);
-        printf("title: ");
-        scanf("%s",books[i].title);
-        printf("writer: ");
-        scanf("%s",books[i].writer);
-        printf("the number of pages: ");
-        scanf("%d",&books[i].pages);
-    }
+    strcpy(books[2].title,"Basic Swift");
+    strcpy(books[2].writer,"Lian");
+    books[2].pages=321;
     
+//    for(int i=0; i<3; i++){
+//        printf("Please enter data of book%d\n",i+1);
+//        printf("title: ");
+//        scanf("%s",books[i].title);
+//        printf("writer: ");
+//        scanf("%s",books[i].writer);
+//        printf("the number of pages: ");
+//        scanf("%d",&books[i].pages);
+//    }
+//    
     printf("title             writer    pages\n");
     printf("=================================\n");
     for(int i=0; i<3; i++){
