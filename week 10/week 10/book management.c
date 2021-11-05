@@ -52,6 +52,7 @@ int main(void){
         }
         printf("title             writer    pages\n");
         printf("=================================\n");
+        i=findindex(books);
         for(int j=0; j<=i; j++){
             printf("%-18s%-10s%d\n",books[j].title,books[j].writer,books[j].pages);
         }
