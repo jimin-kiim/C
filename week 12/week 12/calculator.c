@@ -16,7 +16,7 @@ int main(void) {
     int (*pf[5])(int,int)={addition,subtraction,division,multiplication};
     char calculation[4][10]={"add","subtract","divide","multiply"};
     char operator[4][2]={"+","-","/","*"};
-    
+    char c[10];
     while(1){
         choice=0;
         printf("=========================\n");
@@ -26,9 +26,12 @@ int main(void) {
         printf("1. addition\n2. subtraction\n3. division\n4. multiplication\n5. exit\n\n");
         printf("Enter a number >>");
         scanf("%d",&choice);
-        while(choice!=1&&choice!=2&&choice!=3&&choice!=4&&choice!=5){
+        gets(c);
+        while((choice!=1&&choice!=2&&choice!=3&&choice!=4&&choice!=5)||c[0]=='.'){
+            choice=0;
             printf("Please enter a correct number (1,2,3,4,5) >>");
             scanf("%d",&choice);
+            gets(c);
         }
         if(choice==5)
             return 0;
