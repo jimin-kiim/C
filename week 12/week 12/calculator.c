@@ -16,19 +16,26 @@ int main(void) {
     int (*pf[5])(int,int)={addition,subtraction,division,multiplication};
     char calculation[4][10]={"add","subtract","divide","multiply"};
     char operator[4][2]={"+","-","/","*"};
+    
     while(1){
-    printf("=========================\n");
-    printf("   Simple Calculator\n");
-    printf("=========================\n");
-    printf("What are you going to do?\n");
-    printf("1. addition\n2. subtraction\n3. division\n4. multiplication\n5. exit\n");
-    printf("Enter a number >>");
-    scanf("%d",&choice);
+        choice=0;
+        printf("=========================\n");
+        printf("   Simple Calculator\n");
+        printf("=========================\n");
+        printf("What are you going to do?\n\n");
+        printf("1. addition\n2. subtraction\n3. division\n4. multiplication\n5. exit\n\n");
+        printf("Enter a number >>");
+        scanf("%d",&choice);
+        while(choice!=1&&choice!=2&&choice!=3&&choice!=4&&choice!=5){
+            printf("Please enter a correct number (1,2,3,4,5) >>");
+            scanf("%d",&choice);
+        }
         if(choice==5)
             return 0;
-    printf("Enter two numbers to %s >>",calculation[choice-1]);
-    scanf("%d %d",&a,&b);
-    printf("%d %s %d = %d\n",a,operator[choice-1],b,pf[choice-1](a,b));
+        
+        printf("Enter two numbers to %s >>",calculation[choice-1]);
+        scanf("%d %d",&a,&b);
+        printf("%d %s %d = %d\n",a,operator[choice-1],b,pf[choice-1](a,b));
     }
     
 }
