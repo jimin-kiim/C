@@ -14,18 +14,23 @@ int multiplication(int,int);
 int main(void) {
     int choice,a,b;
     int (*pf[5])(int,int)={addition,subtraction,division,multiplication};
-    char calculation[4][15]={"addition","subtraction","division","multiplication"};
-    printf("=================\n");
-    printf("Simple Calculator\n");
-    printf("=================\n");
+    char calculation[4][10]={"add","subtract","divide","multiply"};
+    char operator[4][2]={"+","-","/","*"};
+    while(1){
+    printf("=========================\n");
+    printf("   Simple Calculator\n");
+    printf("=========================\n");
     printf("What are you going to do?\n");
-    printf("1. addition\n2. subtraction\n3. division\n4. multiplication\n5.exit\n");
+    printf("1. addition\n2. subtraction\n3. division\n4. multiplication\n5. exit\n");
     printf("Enter a number >>");
     scanf("%d",&choice);
+        if(choice==5)
+            return 0;
     printf("Enter two numbers to %s >>",calculation[choice-1]);
     scanf("%d %d",&a,&b);
-    printf("result: %d",pf[choice-1](a,b));
-    return 0;
+    printf("%d %s %d = %d\n",a,operator[choice-1],b,pf[choice-1](a,b));
+    }
+    
 }
 
 int addition(int a,int b){
