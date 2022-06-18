@@ -40,11 +40,18 @@ int main(int argc, const char * argv[]){
 #endif
     delete(&A,NULL,A);
     delete(&A,A,A->link);
+
     nodePointer t = A;
+#if 0
     while(t!=NULL){
         printf("word : %s\n",t->word);
         t=t->link;
     }
+#else
+    for (t; t; t=t->link){
+        printf("word : %s\n",t->word);
+    }
+#endif
 }
 void delete(nodePointer *first, nodePointer trail, nodePointer x){
     // trail : the node infront of the target
